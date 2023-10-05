@@ -140,7 +140,8 @@
     - omero-server restart omero-server
 
 - name: omero server | install omero
-  become: true
+  become: yes
+  become_method: enable
   become_user: "{{ omero_server_system_user }}"
   command: >
     {{ omero_server_omego }}
